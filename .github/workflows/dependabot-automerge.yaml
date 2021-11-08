@@ -1,0 +1,9 @@
+name: dependabot-automerge
+
+on: pull_request_target
+
+jobs:
+  dependabot-automerge:
+    uses: paniclobster/github-workflows/.github/workflows/dependabot-automerge.yaml@main
+    secrets:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
