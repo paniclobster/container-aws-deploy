@@ -1,0 +1,15 @@
+name: build-publish
+
+on:
+  push:
+    tags:
+      - v*.*.*
+
+jobs:
+  build-publish:
+    uses: paniclobster/github-workflows/.github/workflows/docker-build-publish.yaml@main
+    with:
+      docker_image_name: paniclobster/aws-deploy
+    secrets:
+      docker_hub_username: ${{ secrets.DOCKER_HUB_USERNAME }}
+      docker_hub_password: ${{ secrets.DOCKER_HUB_PASSWORD }}

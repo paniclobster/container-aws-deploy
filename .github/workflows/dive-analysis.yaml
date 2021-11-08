@@ -1,0 +1,15 @@
+name: dive-analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  dive-analysis:
+    uses: paniclobster/github-workflows/.github/workflows/docker-dive-analysis.yaml@main
+    with:
+      docker_image_name: paniclobster/aws-deploy

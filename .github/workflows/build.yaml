@@ -1,0 +1,13 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: paniclobster/github-workflows/.github/workflows/docker-build.yaml@main
