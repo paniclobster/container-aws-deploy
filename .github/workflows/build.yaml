@@ -11,3 +11,5 @@ on:
 jobs:
   build:
     uses: paniclobster/github-workflows/.github/workflows/docker-build.yaml@main
+    with:
+      docker_image_name: paniclobster/aws-deploy
