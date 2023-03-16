@@ -11,5 +11,6 @@ jobs:
     with:
       docker_image_name: paniclobster/aws-deploy
     secrets:
-      docker_hub_username: ${{ secrets.DOCKER_HUB_USERNAME }}
-      docker_hub_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      docker_login_registry: docker.io
+      docker_login_username: ${{ secrets.DOCKER_HUB_USERNAME }}
+      docker_login_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
