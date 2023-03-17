@@ -9,8 +9,8 @@ jobs:
   build-publish:
     uses: paniclobster/github-workflows/.github/workflows/docker-build-publish.yaml@main
     with:
-      docker_image_name: ghcr.io/${{ github.repository }}
+      docker_image_name: public.ecr.aws/paniclobster/aws-deploy
     secrets:
-      docker_login_registry: ghcr.io
-      docker_login_username: ${{ github.actor }}
-      docker_login_password: ${{ secrets.GITHUB_TOKEN }}
+      docker_login_registry: public.ecr.aws
+      docker_login_username: ${{ secrets.DOCKER_LOGIN_USERNAME }}
+      docker_login_password: ${{ secrets.DOCKER_LOGIN_PASSWORD }}
