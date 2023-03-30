@@ -1,5 +1,5 @@
 # Entrypoint image
-FROM docker:23.0.1 AS docker
+FROM docker:23.0.2 AS docker
 
 # Base image
 FROM amazon/aws-cli:2.11.6
