@@ -2,7 +2,7 @@
 FROM docker:24.0.5 AS docker
 
 # Base image
-FROM amazon/aws-cli:2.13.9
+FROM amazon/aws-cli:2.13.10
 
 # Base dependencies
 RUN yum update --assumeyes && yum install --assumeyes \
